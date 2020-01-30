@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Into the unknown</title>
+  <link rel="stylesheet" type="text/css" href="./counter/counter.css" />
+  <link rel="stylesheet" type="text/css" href="./recommendation/ch_css.css" />
+  <link rel="stylesheet" type="text/css" href="./thanks/thanks.css" />
+  <link rel="stylesheet" type="text/css" href="./crew/crew.css" />
+  <link rel="stylesheet" type="text/css" href="./main.css" />
+
+  <script type="text/javascript" src="./counter/counter.js"></script>
+  <script type="text/javascript" src="./recommendation/bt.js"></script>
+  <script type="text/javascript" src="./crew/crew.js"></script>
+  <script type='text/javascript' src="./main.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" />
+</head>
+
+<body onmousedown="ClickToPlay()" style="background-color: #ffc1cb;">
+  <div class="header" id="header">
+    <img class="banner" src="../resources/banner.png" />
+  </div>
+
+  <div id="mySidebar" class="sidebar" style="width: 0px; position: fixed; padding: 0px; top: 160px;">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()" style="position: absolute;">&times;</a>
+    <img src="../resources/crew.png" style="object-fit: contain; width: 250px;" />
+  </div>
+
+  <div id="main" style="position: fixed; padding: 0px; top: 160px;">
+    <button class="openbtn" onclick="openNav()">Crew</button>
+  </div>
+
+  <div class="main_source" style="height:5000px">
+    <div>
+      <div>
+        <div class="timer">
+          <h1 id="timer_header" style="height: 400px;">
+            Merry Christmas<br>D-day
+          </h1>
+          <h2 id="timer"></h2>
+        </div>
+      </div>
+
+      <div class="recommendatory">
+        <table border="0">
+          <tr>
+            <td>
+              <div class='button' onclick="b()">
+                <div class="age">
+                  10
+                </div>
+                <span class="age_range">
+                  10~19세
+                </span>
+              </div>
+            </td>
+            <td>
+              <div class='button' onclick="b()">
+                <div class="age">
+                  20
+                </div>
+                <span class="age_range">
+                  20~29세
+                </span>
+              </div>
+            </td>
+            <td>
+              <div class='button' onclick="b()">
+                <div class="age">
+                  30
+                </div>
+                <span class="age_range">
+                  30~39세
+                </span>
+              </div>
+            </td>
+            <td>
+              <div class='button' onclick="b()">
+                <div class="age">
+                  40
+                </div>
+                <span class="age_range">
+                  40~49세
+                </span>
+              </div>
+            </td>
+            <td>
+              <div class='button' onclick="b()">
+                <div class="age">
+                  50
+                </div>
+                <span class="age_range">
+                  50~59세
+                </span>
+              </div>
+            </td>
+            <td>
+              <div class='button' onclick="b()">
+                <div class="age">
+                  60
+                </div>
+                <span class="age_range">
+                  60세 이상
+                </span>
+              </div>
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              <div class='button n10' onclick="b('game_player')">
+                <img class='image' src="../resources/icons/game_player.png" >
+                  <a>
+                    게임기
+                  </a>
+                </img>
+                <span class="rank">
+                  1위: 게임기
+                </span>
+              </div>
+            </td>
+            <td>
+              <div class='button n20' onclick="b('necklace')">
+                <img class='image' src="../resources/icons/necklace.png" />
+                <span class="rank">
+                  1위: 목걸이
+                </span>
+              </div>
+            </td> ------
+            <td>
+              <div class='button n30' onclick="b('necklace')">
+                <img class='image' src="../resources/icons/necklace.png" />
+                <span class="rank">
+                  1위: 목걸이
+                </span>
+              </div>
+            </td>
+            <td>
+              <div class='button n40' onclick="b('muffler')">
+                <img class='image' src="../resources/icons/muffler.png" />
+                <span class="rank">
+                  1위: 목도리
+                </span>
+              </div>
+            </td>
+            <td>
+              <div class='button n50' onclick="b('muffler')">
+                <img class='image' src="../resources/icons/muffler.png" />
+                <span class="rank">
+                  1위: 목도리
+                </span>
+              </div>
+            </td>
+            <td>
+              <div class='button n60' onclick="b('mug')">
+                <img class='image' src="../resources/icons/mug.png" />
+                <span class="rank">
+                  1위: 머그컵
+                </span>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class='button n10' onclick="b('cloth')">
+                <img class='image' src="../resources/icons/cloth.png" />
+                <span class="rank">
+                  2위: 옷
+                </span>
+              </div>
+            </td>
+            <td>
+              <div class='button n20' onclick="b('perfume')">
+                <img class='image' src="../resources/icons/perfume.png" />
+                <span class="rank">
+                  2위: 향수
+                </span>
+              </div>
+            </td>
+            <td>
+              <div class='button n30' onclick="b('ring')">
+                <img class='image' src="../resources/icons/ring.png" />
+                <span class="rank">
+                  2위: 반지
+                </span>
+              </div>
+            </td>
+            <td>
+              <div class='button n40' onclick="b('gloves')">
+                <img class='image' src="../resources/icons/gloves.png" />
+                <span class="rank">
+                  2위: 장갑
+                </span>
+              </div>
+            </td>
+            <td>
+              <div class='button n50' onclick="b('bag(adult)')">
+                <img class='image' src="../resources/icons/bag(adult).png" />
+                <span class="rank">
+                  2위: 가방
+                </span>
+              </div>
+            </td>
+            <td>
+              <div class='button n60' onclick="b('wallet')">
+                <img class='image' src="../resources/icons/wallet.png" />
+                <span class="rank">
+                  2위: 지갑
+                </span>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class='button n10' onclick="b('bag(student)')">
+                <img class='image' src="../resources/icons/bag(student).png" />
+                <span class="rank">
+                  3위: 가방
+                </span>
+              </div>
+            </td>
+            <td>
+              <div class='button n20' onclick="b('clock')">
+                <img class='image' src="../resources/icons/clock.png" />
+                <span class="rank">
+                  3위: 시계
+                </span>
+              </div>
+            </td>
+            <td>
+              <div class='button n30' onclick="b('cloth')">
+                <img class='image' src="../resources/icons/cloth.png" />
+                <span class="rank">
+                  3위: 옷
+                </span>
+              </div>
+            </td>
+            <td>
+              <div class='button n40' onclick="b('game_player')">
+                <img class='image' src="../resources/icons/game_player.png" />
+                <span class="rank">
+                  3위: 게임기
+                </span>
+              </div>
+            </td>
+            <td>
+              <div class='button n50' onclick="b('wallet')">
+                <img class='image' src="../resources/icons/wallet.png" />
+                <span class="rank">
+                  3위: 지갑
+                </span>
+              </div>
+            </td>
+            <td>
+              <div class='button n60' onclick="b('bag(adult)')">
+                <img class='image' src="../resources/icons/bag(adult).png" />
+                <span class="rank">
+                  3위: 가방
+                </span>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class='button n10' onclick="b('laptop')">
+                <img class='image' src="../resources/icons/laptop.png" />
+                <span class="rank">
+                  4위: 노트북
+                </span>
+              </div>
+            </td>
+            <td>
+              <div class='button n20' onclick="b('muffler')">
+                <img class='image' src="../resources/icons/muffler.png" />
+                <span class="rank">
+                  4위: 목도리
+                </span>
+              </div>
+            </td>
+            <td>
+              <div class='button n30' onclick="b('razor')">
+                <img class='image' src="../resources/icons/razor.png" />
+                <span class="rank">
+                  4위: 면도기
+                </span>
+              </div>
+            </td>
+            <td>
+              <div class='button n40' onclick="b('cloth')">
+                <img class='image' src="../resources/icons/cloth.png" />
+                <span class="rank">
+                  4위: 옷
+                </span>
+              </div>
+            </td>
+            <td>
+              <div class='button n50' onclick="b('clock')">
+                <img class='image' src="../resources/icons/clock.png" />
+                <span class="rank">
+                  4위: 시계
+                </span>
+              </div>
+            </td>
+            <td>
+              <div class='button n60' onclick="b('perfume')">
+                <img class='image' src="../resources/icons/perfume.png" />
+                <span class="rank">
+                  4위: 화장품
+                </span>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class='button n10' onclick="b('books')">
+                <img class='image' src="../resources/icons/books.png" />
+                <span class="rank">
+                  5위: 책
+                </span>
+              </div>
+            </td>
+            <td>
+              <div class='button n20' onclick="b('wallet')">
+                <img class='image' src="../resources/icons/wallet.png" />
+                <span class="rank">
+                  5위: 지갑
+                </span>
+              </div>
+            </td>
+            <td>
+              <div class='button n30' onclick="b('clock')">
+                <img class='image' src="../resources/icons/clock.png" />
+                <span class="rank">
+                  5위: 시계
+                </span>
+              </div>
+            </td>
+            <td>
+              <div class='button n40' onclick="b('cosmetics')">
+                <img class='image' src="../resources/icons/cosmetics.png" />
+                <span class="rank">
+                  5위: 화장품
+                </span>
+              </div>
+            </td>
+            <td>
+              <div class='button n50' onclick="b('pendant')">
+                <img class='image' src="../resources/icons/pendant.png" />
+                <span class="rank">
+                  5위: 브로치
+                </span>
+              </div>
+            </td>
+            <td>
+              <div class='button n60' onclick="b('cloth')">
+                <img class='image' src="../resources/icons/cloth.png" />
+                <span class="rank">
+                  5위: 옷
+                </span>
+              </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+
+      <div class="thanks">
+        <h1 class="thanks">인사말</h1>
+        <h3 class="thanks">JH.Park: <한길이 친구 박씨 해커톤에서 숨쉰채 발견><br><br>
+          SH.Han: 배불러...<br><br>
+          HI.Hwang: 평생 그릴 그림을 오늘 다 그리고 가는 것 같다.<br><br>
+          JY.Park: 아 진짜 너무 힘들다. 다음 해커톤으ㄴ...<br><br>
+          HH.Ra: 밤새는 것은 늘 어렵다. 나는 아침형 인간인걸로...<br><br><br>
+        </h3>
+      </div>
+
+      <h1 class="tysm">감사합니다!</h1>
+
+      <div class="footer">
+        <div class="player">
+          <audio id="audio" style="width: 500px;" controls loop='true' preload="auto">
+            <source src="../resources/christmas.m4a" type="audio/mpeg" />
+          </audio>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</body>
+</html>

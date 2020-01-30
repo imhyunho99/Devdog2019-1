@@ -1,0 +1,20 @@
+.timer {
+  min-width: 100vh;
+  min-height: 100vh;
+
+  text-align: center;
+  vertical-align: middle;
+}
+
+#timer_header {
+  font-size: 128px;
+  padding-top: 175px;
+  color: #181818;
+  user-select: none;
+}
+
+#timer {
+  font-size: 81px;
+  padding-top: 175px;
+  color: #181818;
+}

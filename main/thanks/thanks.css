@@ -1,0 +1,18 @@
+h1.thanks {
+  font-size: 128px;
+  text-align: center;
+  color: #181818;
+}
+
+h3.thanks {
+  font-size: 56px;
+  color: #181818;
+
+  margin-top: 50px;
+  margin-left: 320px;
+}
+
+div.thanks {
+  width: 100%;
+  margin: auto;
+}
